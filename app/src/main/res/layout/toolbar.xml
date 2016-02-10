@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+       <!-- <ImageView
+            android:id="@+id/img_vw_left_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@mipmap/ic_back_btn"
+            android:visibility="gone"
+            />-->
+
+
+
+        <ImageView
+            android:id="@+id/img_vw_toolbar_barcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/barcode_icon"
+            />
+
+        <ImageView
+            android:id="@+id/img_vw_toolbar_sec_barcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="7dp"
+            android:layout_toLeftOf="@+id/img_vw_toolbar_barcode"
+            android:src="@mipmap/edit_icon"
+            android:visibility="visible"
+            />
+
+        <TextView
+            android:id="@+id/txt_vw_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/img_vw_toolbar_barcode"
+            android:text="Products"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginRight="0dp"
+            android:textSize="@dimen/text_size_eightn"
+            android:textStyle="bold"
+            />
+
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

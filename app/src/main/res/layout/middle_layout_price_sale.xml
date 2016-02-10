@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:focusable="true"
+                  android:focusableInTouchMode="true"
+                  android:padding="15dp">
+
+        <!--New Price -->
+        <LinearLayout
+            android:id="@+id/layout_addprice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:src="@mipmap/price_icon"/>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_addprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+
+                <EditText
+                    android:id="@+id/ed_addprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_border_bottom"
+                    android:hint="@string/addprice_hint"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hint"
+                    android:textSize="12sp"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <!--New Sale -->
+
+        <LinearLayout
+            android:id="@+id/layout_coupane"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            >
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:src="@mipmap/coupon_type_icon"/>
+
+            <TextView
+                android:id="@+id/tv_saletype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/edit_text_border_bottom"
+                android:hint="@string/saletype_hint"
+                android:padding="10dp"
+                android:textColorHint="@color/hint"
+                android:textSize="12sp"/>
+
+
+        </LinearLayout>
+
+
+       <!-- <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+
+            android:visibility="gone"
+            />-->
+
+        <!--   android:prompt="@string/saletype_hint"
+         Physical Coupan-->
+        <LinearLayout
+            android:id="@+id/layout_physicalcoupan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:src="@mipmap/photo_icon"/>
+
+                <TextView
+                    android:id="@+id/tv_coupanphoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/coupanphoto"
+                    android:padding="10dp"
+                    android:textColorHint="@color/hint"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_coupan"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/photo_background">
+
+            </ImageView>
+
+        </LinearLayout>
+        <!--CoupanCode Textview-->
+        <TextView
+            android:id="@+id/tv_coupancode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/edit_text_border_bottom"
+            android:hint="@string/couponcode"
+            android:padding="10dp"
+            android:textColorHint="@color/hint"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+
+        <!--New Price -->
+
+        <LinearLayout
+            android:id="@+id/layout_addlocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:src="@mipmap/location_icon"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_addlocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/autocomplete_addlocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_border_bottom"
+                    android:drawableRight="@mipmap/gps_icon"
+                    android:hint="@string/addlocation_hint"
+                    android:padding="10dp"
+                    android:textColorHint="@color/hint"
+                    android:textSize="12sp"/>
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <!--New Sale -->
+
+        <LinearLayout
+            android:id="@+id/layout_sale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+            <!--  android:visibility="gone"-->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:src="@mipmap/sale_icon"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_sale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/ed_sale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_border_bottom"
+                    android:hint="@string/sale_hint"
+                    android:padding="10dp"
+                    android:textColorHint="@color/hint"
+                    android:textSize="12sp"/>
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+        <!--New Price -->
+
+
+        <LinearLayout
+            android:id="@+id/layout_optionalprice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:src="@mipmap/detail_icon"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_optional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/ed_optional"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_border_bottom"
+                    android:hint="@string/goodprice_hint"
+                    android:padding="10dp"
+                    android:textColorHint="@color/hint"
+                    android:textSize="12sp"/>
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+
+        <!--New Sale -->
+        <LinearLayout
+            android:id="@+id/layout_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+            <!-- -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:src="@mipmap/date_icon"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/ed_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_border_bottom"
+                    android:hint="@string/expiredate_hint"
+                    android:padding="10dp"
+                    android:textColorHint="@color/hint"
+                    android:textSize="12sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+        <!--InStore layout-->
+
+        <LinearLayout
+            android:id="@+id/layout_instore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="horizontal"
+                >
+
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:src="@mipmap/photo_icon"/>
+
+                <TextView
+                    android:id="@+id/tv_instore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/instore"
+                    android:padding="10dp"
+                    android:textColorHint="@color/hint"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_instore"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/photo_background">
+
+            </ImageView>
+
+        </LinearLayout>
+        <!--Select Category-->
+        <LinearLayout
+            android:id="@+id/layout_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:src="@mipmap/category_icon"/>
+
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:hint="@string/category_text"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="13dp"
+                android:paddingBottom="7dp"
+                android:textColor="@color/hint"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <!--New Price -->
+
+        <LinearLayout
+            android:id="@+id/layout_addphoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:src="@mipmap/photo_icon"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_addphoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/ed_addphoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_border_bottom"
+                    android:hint="@string/addphoto_hint"
+                    android:padding="10dp"
+                    android:textColorHint="@color/hint"
+                    android:textSize="12sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <!--new sale Categories-->
+
+
+        <!--<android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_gravity="center_vertical"
+
+            />-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_margin="15dp">
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/button_background"
+                android:drawableLeft="@mipmap/submit_icon"
+                android:padding="10dp"
+                android:text="@string/submit_btn"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"/>
+
+            <!--@color/ligth_blue-->
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

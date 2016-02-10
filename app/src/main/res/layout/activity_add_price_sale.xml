@@ -1,0 +1,25 @@
+<LinearLayout android:id="@+id/lay_font"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <include
+        layout="@layout/mytoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top">
+
+    </include>
+
+    <include
+        layout="@layout/middle_layout_price_sale"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top">
+
+    </include>
+
+
+</LinearLayout>

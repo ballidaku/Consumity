@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="#f2f2f2">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerview_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_top_ten_margin"
+                android:layout_marginLeft="@dimen/activity_top_twenty_margin"
+                android:layout_marginRight="@dimen/activity_top_twenty_margin"
+                android:layout_marginTop="@dimen/activity_top_twenty_margin">
+
+                <TextView
+                    android:id="@+id/txt_vw_today_sale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Today New Sales"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_alignEnd="@+id/txt_vw_today_sale"
+                    android:layout_alignLeft="@+id/txt_vw_today_sale"
+                    android:layout_alignRight="@+id/txt_vw_today_sale"
+                    android:layout_alignStart="@+id/txt_vw_today_sale"
+                    android:layout_below="@+id/txt_vw_today_sale"
+                    android:background="@color/orange"/>
+            </RelativeLayout>
+            <!-- <view
+                 class="android.support.v7.widget.RecyclerView"
+                 android:layout_width="match_parent"
+                 android:id="@+id/recycler_vw_sale"
+                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                 android:layout_height="match_parent"
+                  />-->
+
+
+            <!-- <GridView
+                 android:id="@+id/grid_vw_today_sale"
+                 xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:gravity="center"
+                 android:horizontalSpacing="5dp"
+                 android:numColumns="auto_fit"
+                 android:stretchMode="columnWidth"
+                 android:paddingLeft="2dp"
+                 android:paddingRight="2dp"
+                 android:paddingTop="2dp"
+                 android:verticalSpacing="5dp"
+                 android:scrollingCache="false"
+                 android:smoothScrollbar="true"
+                 android:fastScrollEnabled="true">
+
+             </GridView>-->
+
+            <app.abhilasha.consumity.com.consumity.Utils.ExpandableHeightGridView
+                android:id="@+id/grid_vw_today_sale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:scrollbars="none"
+                android:horizontalSpacing="5dp"
+                android:stretchMode="columnWidth"
+                android:isScrollContainer="false"
+                android:numColumns="auto_fit"
+                android:verticalSpacing="5dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:paddingTop="2dp"
+                android:scrollingCache="false"
+                android:smoothScrollbar="true"
+                android:fastScrollEnabled="true"/>
+
+            <!-- <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />-->
+
+            <!--<app.abhilasha.consumity.com.consumity.Utils.CustomRecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"/>-->
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_top_ten_margin"
+                android:layout_marginLeft="@dimen/activity_top_twenty_margin"
+                android:layout_marginRight="@dimen/activity_top_twenty_margin"
+                android:layout_marginTop="@dimen/activity_top_twenty_margin">
+
+                <TextView
+                    android:id="@+id/txt_vw_yesterday_sale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Yesterday New Sales"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_alignEnd="@+id/txt_vw_yesterday_sale"
+                    android:layout_alignLeft="@+id/txt_vw_yesterday_sale"
+                    android:layout_alignRight="@+id/txt_vw_yesterday_sale"
+                    android:layout_alignStart="@+id/txt_vw_yesterday_sale"
+                    android:layout_below="@+id/txt_vw_yesterday_sale"
+                    android:background="@color/orange"/>
+            </RelativeLayout>
+
+            <!--<GridView
+                android:id="@+id/grid_vw_yesterday_sale"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:horizontalSpacing="5dp"
+                android:numColumns="auto_fit"
+                android:stretchMode="columnWidth"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:paddingTop="2dp"
+                android:verticalSpacing="5dp"
+                android:scrollingCache="false"
+                android:smoothScrollbar="true"
+                android:fastScrollEnabled="true">
+
+            </GridView>-->
+
+            <app.abhilasha.consumity.com.consumity.Utils.ExpandableHeightGridView
+                android:id="@+id/grid_vw_yesterday_sale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:scrollbars="none"
+                android:horizontalSpacing="5dp"
+                android:stretchMode="columnWidth"
+                android:isScrollContainer="false"
+                android:numColumns="auto_fit"
+                android:verticalSpacing="5dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:paddingTop="2dp"
+                android:scrollingCache="false"
+                android:smoothScrollbar="true"
+                android:fastScrollEnabled="true"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--    </LinearLayout>-->
+
+</android.support.design.widget.CoordinatorLayout>

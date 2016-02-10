@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Consumity</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_register">Register</string>
+    <string name="txt_login_btn">Login with Consumity</string>
+    <string name="facebook_app_id">1726169904280604</string>
+    <string name="profile_name_transition">profile_name</string>
+    <string name="profile_pic_transition">profile_pic</string>
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_home</item>
+        <item>@string/nav_item_search</item>
+        <item>@string/nav_item_product</item>
+        <item>@string/nav_item_list</item>
+        <item>@string/nav_item_setting</item>
+        <item>@string/nav_item_about</item>
+        <item>@string/nav_item_help</item>
+        <item>@string/nav_item_terms</item>
+    </string-array>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="nav_item_home">Home</string>
+    <string name="nav_item_search">Searches</string>
+    <string name="nav_item_product">Products</string>
+    <string name="nav_item_list">Lists</string>
+    <string name="nav_item_setting">Settings</string>
+    <string name="nav_item_about">About</string>
+    <string name="nav_item_help">Help &amp; Feedback</string>
+    <string name="nav_item_terms">Terms of use</string>
+    <string name="title_activity_view_store_details">ViewStoreDetails</string>
+    <string name="title_activity_view_product_details">ViewProductDetails</string>
+
+    <string name="leave_a_comment"><u>Leave a Comment</u></string>
+    <string name="amazon_unerline"><u>Amazon</u></string>
+    <string name="title_unerline"><u>Title</u></string>
+    <string name="brand_unerline"><u>Brand</u></string>
+    <string name="manufacturer_unerline"><u>Manufacturer</u></string>
+    <string name="product_desc_unerline"><u>Product Descrition</u></string>
+    <string name="other_info_unerline"><u>Other Information</u></string>
+    <string name="back_underline"><u>Back</u></string>
+
+
+
+    <string name="add_product_in_list">Add this Product in list</string>
+    <string name="add_new_sale">Add New Sale</string>
+    <string name="scan_barcode">Scan a Barcode...</string>
+    <string name="change_location">Change Location</string>
+
+    <string name="share">Share</string>
+    <string name="rename_list">Rename List</string>
+    <string name="del_products">Delete Products From List</string>
+    <string name="copy_to_new_list">Copy Products to New List</string>
+    <string name="copy_to_existing_list">Copy Products to Existing List</string>
+
+    <string name="title_activity_product__full__description">Product_Full_Description</string>
+
+    <string name="title">Add A New Price</string>
+    <string name="addprice_hint">Add Price</string>
+    <string name="addlocation_hint">Add location</string>
+    <string name="addphoto_hint">Add photo</string>
+    <string name="submit_btn">Submit</string>
+    <string name="goodprice_hint">Why is this a good price?{optional}</string>
+    <string name="saletype_hint">Select the type of the sale</string>
+    <string name="sale_hint">Select the sale savings</string>
+    <string name="expiredate_hint">Add expiration date (optional)</string>
+    <string name="category_text">Select Category (optional)</string>
+
+    <string name="coupanphoto">Add Photo of Coupan</string>
+    <string name="couponcode">Add a Coupon Code</string>
+    <string name="instore">Add photo of sale (optional)</string>
+
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+
+    <string name="first_tv">LG Optimum Exceed 2.......</string>
+    <string name="sec_tv">$14.99 </string>
+    <string name="first_text">Kohal \'s</string>
+    <string name="sec_text">Online &amp; In-store</string>
+    <string name="title_activity_lists_click_product">ListsClickProduct</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="title_activity_term_use">TermUseActivity</string>
+    <string name="title_activity_leave_comment">LeaveComment</string>
+    <string name="title_activity_category">CategoryActivity</string>
+
+
+</resources>

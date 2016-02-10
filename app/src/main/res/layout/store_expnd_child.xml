@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:padding="10dp">
+
+    <!--<GridView
+        android:id="@+id/grid_vw_store"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:scrollbars="none"
+
+        android:verticalSpacing="10dp">
+    </GridView>-->
+
+    <app.abhilasha.consumity.com.consumity.Utils.ExpandableHeightGridView
+        android:id="@+id/grid_vw_store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:horizontalSpacing="5dp"
+        android:isScrollContainer="false"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="10dp" />
+
+    <!-- <android.support.v7.widget.RecyclerView
+         android:id="@+id/recycler_view"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:scrollbars="vertical" />-->
+
+</LinearLayout>

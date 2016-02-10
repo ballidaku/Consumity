@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:paddingBottom="@dimen/activity_top_twenty_margin"
+                android:paddingTop="@dimen/activity_top_twenty_margin">
+
+    <ImageView
+        android:id="@+id/img_vw_drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/activity_top_ten_margin"
+        android:layout_marginRight="@dimen/activity_top_ten_margin"
+        />
+
+    <TextView
+        android:id="@+id/txt_vw_drawer_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@+id/img_vw_drawer"
+        android:paddingLeft="@dimen/activity_top_ten_margin"
+        android:text="Home"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"/>
+
+
+</RelativeLayout>

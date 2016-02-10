@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00AFCA</color>
+    <color name="colorPrimaryDark">#00AFCA</color>
+    <color name="colorAccent">#F68131</color>
+    <color name="white">#fff</color>
+    <color name="black">#000000</color>
+    <color name="orange">#F68131</color>
+    <color name="orange_dark">#CA702C</color>
+    <color name="sky_blue">#00AFCA</color>
+    <color name="gray_background">#f2f2f2</color>
+    <color name="hint">#B1B1B1</color>
+    <color name = "GrayHot">#272727</color>
+
+    <color name="first_back">#F5F5F5</color>
+
+</resources>

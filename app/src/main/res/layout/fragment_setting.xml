@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent" xmlns:app = "http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:orientation = "vertical">
+
+
+        <ScrollView
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:scrollbars = "none">
+
+            <LinearLayout
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:layout_margin = "@dimen/activity_top_twenty_margin"
+                android:orientation = "vertical">
+
+                <RelativeLayout
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width = "wrap_content"
+                        android:layout_height = "wrap_content"
+                        android:layout_alignParentLeft = "true"
+                        android:layout_centerInParent = "true"
+                        android:text = "Receive Notifications"
+                        android:textSize = "16sp"/>
+
+                   <!-- <CheckBox
+                        android:id = "@+id/chk_photos"
+                        android:layout_width = "wrap_content"
+                        android:layout_height = "wrap_content"
+                        android:layout_alignParentRight = "true"
+                        android:layout_centerInParent = "true"
+                        android:background = "@android:color/transparent"
+                        android:button = "@drawable/checkbox_selector_profile"
+                        android:gravity = "center"
+                        android:padding="5dp"
+                        android:textAppearance = "?android:attr/textAppearanceLarge"/>-->
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id = "@+id/switch_notification"
+                        android:layout_width = "wrap_content"
+                        android:layout_height = "wrap_content"
+                        android:layout_alignParentRight = "true"
+                        android:checked = "false"
+                        android:padding="5dp"
+                        app:theme="@style/Color1SwitchStyle" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width = "match_parent"
+                    android:layout_height = "1dp"
+                    android:background = "@android:color/darker_gray"/>
+
+                <LinearLayout
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:padding = "15dp"
+                    android:orientation = "vertical">
+
+                    <TextView
+                        android:layout_width = "wrap_content"
+                        android:layout_height = "wrap_content"
+                        android:text = "Enable Location"
+                        android:textSize = "16dp"/>
+
+                    <TextView
+                        android:layout_width = "wrap_content"
+                        android:layout_height = "wrap_content"
+                        android:text = "Turning on location will activate all location features"
+                        android:textSize = "12sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width = "match_parent"
+                    android:layout_height = "0.5dp"
+                    android:background = "@android:color/darker_gray"/>
+
+
+                <TextView
+                    android:id = "@+id/txtv_edit_profile"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:padding = "15dp"
+                    android:text = "Edit Profile"
+                    android:textSize = "16dp"/>
+
+
+                <View
+                    android:layout_width = "match_parent"
+                    android:layout_height = "1dp"
+                    android:background = "@android:color/darker_gray"/>
+
+
+                <TextView
+                    android:id="@+id/txtv_logout"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "match_parent"
+                    android:padding = "15dp"
+                    android:text = "Logout"
+                    android:textSize = "16dp"/>
+
+
+                <View
+                    android:layout_width = "match_parent"
+                    android:layout_height = "1dp"
+                    android:background = "@android:color/darker_gray"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

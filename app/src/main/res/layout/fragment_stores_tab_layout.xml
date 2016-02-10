@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ExpandableListView
+        android:id="@+id/ExpLst_categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:childDivider="@android:color/transparent"
+        android:groupIndicator="@null"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
+        android:fastScrollEnabled="true"
+        android:smoothScrollbar="true"
+        android:scrollingCache="false"
+        android:fastScrollAlwaysVisible="false"
+        />
+
+
+</LinearLayout>
