@@ -95,7 +95,7 @@
 
              </GridView>-->
 
-            <app.abhilasha.consumity.com.consumity.Utils.ExpandableHeightGridView
+            <app.consumity.Utils.ExpandableHeightGridView
                 android:id="@+id/grid_vw_today_sale"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -119,7 +119,7 @@
             android:layout_height="match_parent"
             android:scrollbars="vertical" />-->
 
-            <!--<app.abhilasha.consumity.com.consumity.Utils.CustomRecyclerView
+            <!--<app.consumity.Utils.CustomRecyclerView
                 android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -172,7 +172,7 @@
 
             </GridView>-->
 
-            <app.abhilasha.consumity.com.consumity.Utils.ExpandableHeightGridView
+            <app.consumity.Utils.ExpandableHeightGridView
                 android:id="@+id/grid_vw_yesterday_sale"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

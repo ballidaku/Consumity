@@ -12,7 +12,7 @@
         android:scaleType="fitXY"
         android:src="@mipmap/list"/>-->
 
-    <app.abhilasha.consumity.com.consumity.Utils.ImageViewSmoothScroll
+    <app.consumity.Utils.ImageViewSmoothScroll
         android:id="@+id/img_lists_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

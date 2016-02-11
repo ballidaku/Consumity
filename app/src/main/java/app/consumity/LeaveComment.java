@@ -1,0 +1,50 @@
+package app.consumity;
+import android.content.Context;
+import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.TextView;
+
+import app.consumity.Utils.GlobalConstant;
+
+public class LeaveComment extends AppCompatActivity implements View.OnClickListener
+{
+    Context con;
+    GlobalConstant constant = new GlobalConstant();
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_leave_comment);
+
+        con = this;
+        constant.set_bold_font(con, findViewById(R.id.lay_font));
+        findByIds();
+
+    }
+
+    void findByIds()
+    {
+        findViewById(R.id.imgv_top_left).setOnClickListener(this);
+        ((TextView) findViewById(R.id.txtv_title)).setText("Amazon");
+
+    }
+
+    @Override
+    public void onClick(View v)
+    {
+        switch (v.getId())
+        {
+            case R.id.imgv_top_left:
+                finish();
+                break;
+
+            default:
+                break;
+        }
+    }
+}

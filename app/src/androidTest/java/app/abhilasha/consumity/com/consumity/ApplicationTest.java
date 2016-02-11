@@ -1,4 +1,4 @@
-package app.abhilasha.consumity.com.consumity;
+package app.consumity;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

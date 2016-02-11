@@ -17,7 +17,7 @@
         android:verticalSpacing="10dp">
     </GridView>-->
 
-    <app.abhilasha.consumity.com.consumity.Utils.ExpandableHeightGridView
+    <app.consumity.Utils.ExpandableHeightGridView
         android:id="@+id/grid_vw_store"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

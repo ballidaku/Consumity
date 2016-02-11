@@ -112,7 +112,7 @@
             android:layout_width = "match_parent"
             android:layout_height = "wrap_content">
 
-            <app.abhilasha.consumity.com.consumity.Utils.ImageViewSmoothScroll
+            <app.consumity.Utils.ImageViewSmoothScroll
                 android:id = "@+id/imgv_sale_banner"
                 android:layout_width = "match_parent"
                 android:layout_height = "wrap_content"

@@ -36,7 +36,7 @@
 
     <fragment
         android:id="@+id/fragment_navigation_drawer"
-        android:name="app.abhilasha.consumity.com.consumity.navitems.FragmentDrawer"
+        android:name="app.consumity.navitems.FragmentDrawer"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
