@@ -38,18 +38,18 @@ public class EditProfile_Activity extends AppCompatActivity implements View.OnCl
     TextView txtv_profile_cancel_pic, txtv_profile_change_pic;
     TextView txtv_title;
 
-    EditText edtv_fullname, edtv_username, edtv_email, edtv_old_password, edtv_new_password,edtv_confirm_password;
+    EditText edtv_fullname, edtv_username, edtv_email, edtv_old_password, edtv_new_password, edtv_confirm_password;
     ImageView imgv_user_profile;
     CheckBox  chkb_change_password;
 
-    LinearLayout llay_save_details, llay_isfacebook_manuall_login,llay_ischeckebox_checked;
+    LinearLayout llay_save_details, llay_isfacebook_manuall_login, llay_ischeckebox_checked;
 
     Context con;
     GlobalConstant constant = new GlobalConstant();
     Dialogs        dialogs  = new Dialogs();
 
-    String base64_photoPath="";
-    boolean isImageUpdated=false;
+    String  base64_photoPath = "";
+    boolean isImageUpdated   = false;
     String flag;
 
     @Override
@@ -81,23 +81,18 @@ public class EditProfile_Activity extends AppCompatActivity implements View.OnCl
         imgv_user_profile = (ImageView) findViewById(R.id.imgv_user_profile);
 
         edtv_fullname = (EditText) findViewById(R.id.edtv_fullname);
-        ( edtv_username = (EditText) findViewById(R.id.edtv_username)).setEnabled(false);
+        (edtv_username = (EditText) findViewById(R.id.edtv_username)).setEnabled(false);
         edtv_email = (EditText) findViewById(R.id.edtv_email);
-
 
         edtv_old_password = (EditText) findViewById(R.id.edtv_old_password);
         edtv_new_password = (EditText) findViewById(R.id.edtv_new_password);
-        edtv_confirm_password= (EditText) findViewById(R.id.edtv_confirm_password);
-
+        edtv_confirm_password = (EditText) findViewById(R.id.edtv_confirm_password);
 
         chkb_change_password = (CheckBox) findViewById(R.id.chkb_change_password);
 
         (llay_save_details = (LinearLayout) findViewById(R.id.llay_save_details)).setOnClickListener(this);
-        llay_isfacebook_manuall_login=(LinearLayout)findViewById(R.id.llay_isfacebook_manuall_login);
-        llay_ischeckebox_checked=(LinearLayout)findViewById(R.id.llay_ischeckebox_checked);
-
-
-
+        llay_isfacebook_manuall_login = (LinearLayout) findViewById(R.id.llay_isfacebook_manuall_login);
+        llay_ischeckebox_checked = (LinearLayout) findViewById(R.id.llay_ischeckebox_checked);
 
         llay_ischeckebox_checked.setVisibility(View.GONE);
 
@@ -107,7 +102,7 @@ public class EditProfile_Activity extends AppCompatActivity implements View.OnCl
             public void onCheckedChanged(CompoundButton compoundButton, boolean b)
             {
 
-                int  view =b == true ? View.VISIBLE : View.GONE;
+                int view = b == true ? View.VISIBLE : View.GONE;
                 llay_ischeckebox_checked.setVisibility(view);
 
                 edtv_new_password.setText("");
@@ -120,16 +115,12 @@ public class EditProfile_Activity extends AppCompatActivity implements View.OnCl
         findViewById(R.id.imgv_top_left).setOnClickListener(this);
     }
 
-
-
-
-
     private void setData()
     {
         String full_name = constant.getParticularValueFromPreference(con, GlobalConstant.KeyValues_Names.UserData.toString(), GlobalConstant.KeyValues_Names.FirstName.toString());
         String user_name = constant.getParticularValueFromPreference(con, GlobalConstant.KeyValues_Names.UserData.toString(), GlobalConstant.KeyValues_Names.UserName.toString());
         String email     = constant.getParticularValueFromPreference(con, GlobalConstant.KeyValues_Names.UserData.toString(), GlobalConstant.KeyValues_Names.EmailID.toString());
-        flag=constant.getParticularValueFromPreference(con, GlobalConstant.KeyValues_Names.UserData.toString(), GlobalConstant.KeyValues_Names.Flag.toString());
+        flag = constant.getParticularValueFromPreference(con, GlobalConstant.KeyValues_Names.UserData.toString(), GlobalConstant.KeyValues_Names.Flag.toString());
 
         String photo_url = constant.getParticularValueFromPreference(con, GlobalConstant.KeyValues_Names.UserData.toString(), GlobalConstant.KeyValues_Names.PhotoPath.toString());
 
@@ -139,10 +130,9 @@ public class EditProfile_Activity extends AppCompatActivity implements View.OnCl
 
         constant.setRoundImage(con, imgv_user_profile, photo_url);
 
-
-        if(flag.equalsIgnoreCase("facebook"))
+        if (flag.equalsIgnoreCase("facebook"))
         {
-            String[] e=email.split("@");
+            String[] e = email.split("@");
             edtv_email.setText(e[0]);
             llay_isfacebook_manuall_login.setVisibility(View.GONE);
         }
@@ -151,10 +141,7 @@ public class EditProfile_Activity extends AppCompatActivity implements View.OnCl
             edtv_email.setText(email);
         }
 
-
     }
-
-
 
     @Override
     public void onClick(View v)
@@ -167,10 +154,9 @@ public class EditProfile_Activity extends AppCompatActivity implements View.OnCl
 
             case R.id.llay_save_details:
 
-//                saveData();
+                //                saveData();
                 VALIDATION_CHECK(v);
                 break;
-
 
             case R.id.txtv_profile_change_pic:
 
@@ -188,17 +174,16 @@ public class EditProfile_Activity extends AppCompatActivity implements View.OnCl
         Log.e("IScheck", "" + chkb_change_password.isChecked());
     }*/
 
-
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (resultCode == Activity.RESULT_OK)
         {
             if (requestCode == 1)
             {
-                String filePath = null;
-                filePath = Environment.getExternalStorageDirectory() + "/temp.jpg";
+                String filePath = Environment.getExternalStorageDirectory() + "/temp.jpg";
                 if (filePath != null)
                 {
                     constant.performCrop(filePath, con);
@@ -231,7 +216,7 @@ public class EditProfile_Activity extends AppCompatActivity implements View.OnCl
                     String path = data.getStringExtra(CropImage.IMAGE_PATH);
                     if (path != null)
                     {
-                       setPhoto_Path(path);
+                        setPhoto_Path(path);
 
                     }
                 }
@@ -253,8 +238,6 @@ public class EditProfile_Activity extends AppCompatActivity implements View.OnCl
         }
     }
 
-
-
     void VALIDATION_CHECK(View v)
     {
         if (edtv_fullname.getText().toString().trim().isEmpty())
@@ -269,65 +252,49 @@ public class EditProfile_Activity extends AppCompatActivity implements View.OnCl
         {
             GlobalConstant.show_snackbar(v, "Please enter email id.");
         }
-        else if (!(edtv_email.getText().toString().trim().matches(GlobalConstant.EmailPattern))
-                    && !flag.equalsIgnoreCase("facebook"))
+        else if (!(edtv_email.getText().toString().trim().matches(GlobalConstant.EmailPattern)) && !flag.equalsIgnoreCase("facebook"))
         {
             GlobalConstant.show_snackbar(v, "Please enter valid email id.");
         }
-        else if (edtv_old_password.getText().toString().trim().isEmpty()
-                  && !flag.equalsIgnoreCase("facebook")
-                  && chkb_change_password.isChecked())
+        else if (edtv_old_password.getText().toString().trim().isEmpty() && !flag.equalsIgnoreCase("facebook") && chkb_change_password.isChecked())
         {
             GlobalConstant.show_snackbar(v, "Please enter old password.");
         }
-        else if ( edtv_old_password.getText().toString().trim().length()<5
-                  && !flag.equalsIgnoreCase("facebook")
-                  && chkb_change_password.isChecked())
+        else if (edtv_old_password.getText().toString().trim().length() < 5 && !flag.equalsIgnoreCase("facebook") && chkb_change_password.isChecked())
         {
             GlobalConstant.show_snackbar(v, "Please enter old password minimum of 5 characters.");
         }
-        else if (edtv_new_password.getText().toString().trim().isEmpty()
-                  && !flag.equalsIgnoreCase("facebook")
-                  && chkb_change_password.isChecked())
+        else if (edtv_new_password.getText().toString().trim().isEmpty() && !flag.equalsIgnoreCase("facebook") && chkb_change_password.isChecked())
         {
             GlobalConstant.show_snackbar(v, "Please enter new password.");
         }
-        else if (edtv_new_password.getText().toString().trim().length()<5
-                  && !flag.equalsIgnoreCase("facebook")
-                  && chkb_change_password.isChecked())
+        else if (edtv_new_password.getText().toString().trim().length() < 5 && !flag.equalsIgnoreCase("facebook") && chkb_change_password.isChecked())
         {
             GlobalConstant.show_snackbar(v, "Please enter new password minimum of 5 characters.");
         }
-        else if (edtv_confirm_password.getText().toString().trim().isEmpty()
-                  && !flag.equalsIgnoreCase("facebook")
-                  && chkb_change_password.isChecked())
+        else if (edtv_confirm_password.getText().toString().trim().isEmpty() && !flag.equalsIgnoreCase("facebook") && chkb_change_password.isChecked())
         {
             GlobalConstant.show_snackbar(v, "Please enter confirm password.");
         }
-        else if ( edtv_confirm_password.getText().toString().trim().length()<5
-                  && !flag.equalsIgnoreCase("facebook")
-                  && chkb_change_password.isChecked())
+        else if (edtv_confirm_password.getText().toString().trim().length() < 5 && !flag.equalsIgnoreCase("facebook") && chkb_change_password.isChecked())
         {
             GlobalConstant.show_snackbar(v, "Please enter confirm password minimum of 5 characters.");
         }
-        else if (!(edtv_new_password.getText().toString().equals(edtv_confirm_password.getText().toString()))
-                     && !flag.equalsIgnoreCase("facebook")
-                     && chkb_change_password.isChecked())
+        else if (!(edtv_new_password.getText().toString().equals(edtv_confirm_password.getText().toString())) && !flag.equalsIgnoreCase("facebook") && chkb_change_password.isChecked())
         {
             GlobalConstant.show_snackbar(v, "New and confirm password did not match.");
         }
         else
         {
 
-
             HashMap<String, String> UpdateProfile_Paramters = new HashMap<>();
 
             UpdateProfile_Paramters.put(GlobalConstant.KeyValues_Names.CustomerId.toString(), constant.getParticularValueFromPreference(con, GlobalConstant.KeyValues_Names.UserData.toString(), GlobalConstant.KeyValues_Names.CustomerId.toString()));
-            UpdateProfile_Paramters.put(GlobalConstant.KeyValues_Names.EmailID.toString(),edtv_email.getText().toString().trim() );
-            UpdateProfile_Paramters.put(GlobalConstant.KeyValues_Names.FirstName.toString(),edtv_fullname.getText().toString().trim() );
-            UpdateProfile_Paramters.put(GlobalConstant.KeyValues_Names.UserName.toString(),edtv_username.getText().toString().trim() );
+            UpdateProfile_Paramters.put(GlobalConstant.KeyValues_Names.EmailID.toString(), edtv_email.getText().toString().trim());
+            UpdateProfile_Paramters.put(GlobalConstant.KeyValues_Names.FirstName.toString(), edtv_fullname.getText().toString().trim());
+            UpdateProfile_Paramters.put(GlobalConstant.KeyValues_Names.UserName.toString(), edtv_username.getText().toString().trim());
 
-            if(flag.equalsIgnoreCase("facebook") || !chkb_change_password.isChecked())
+            if (flag.equalsIgnoreCase("facebook") || !chkb_change_password.isChecked())
             {
                 UpdateProfile_Paramters.put(GlobalConstant.KeyValues_Names.oldpassword.toString(), "");
                 UpdateProfile_Paramters.put(GlobalConstant.KeyValues_Names.Password.toString(), "");
@@ -338,7 +305,6 @@ public class EditProfile_Activity extends AppCompatActivity implements View.OnCl
                 UpdateProfile_Paramters.put(GlobalConstant.KeyValues_Names.Password.toString(), edtv_new_password.getText().toString().trim());
             }
 
-
             if (isImageUpdated)
             {
                 UpdateProfile_Paramters.put(GlobalConstant.KeyValues_Names.PhotoPath.toString(), base64_photoPath);
@@ -348,7 +314,7 @@ public class EditProfile_Activity extends AppCompatActivity implements View.OnCl
                 UpdateProfile_Paramters.put(GlobalConstant.KeyValues_Names.PhotoPath.toString(), "");
             }
 
-          UPDATE_PROFILE_SERVICE(UpdateProfile_Paramters);
+            UPDATE_PROFILE_SERVICE(UpdateProfile_Paramters);
 
         }
     }
@@ -358,7 +324,7 @@ public class EditProfile_Activity extends AppCompatActivity implements View.OnCl
     public void UPDATE_PROFILE_SERVICE(final HashMap<String, String> data)
     {
 
-        Log.e("Hit",""+data);
+        Log.e("Hit", "" + data);
 
         GlobalConstant.execute(new Super_AsyncTask(con, data, GlobalConstant.base_url + "Customer/UpdateProfile", new Super_AsyncTask_Interface()
         {
@@ -370,16 +336,10 @@ public class EditProfile_Activity extends AppCompatActivity implements View.OnCl
                     JSONObject object = new JSONObject(output);
                     if (object.getString("Status").equals("success"))
                     {
-                        // Log.e("update response", object.toString());
 
-
-                         constant.saveToPreference(con, object.getString("Message"), GlobalConstant.KeyValues_Names.UserData.toString());
-//                        Constant_Class.SAVE_PERSONNEL_DATA(con, object.getString("Message"), Constant_Class.KeyValues_Names.Own_Data.toString());
+                        constant.saveToPreference(con, object.getString("Message"), GlobalConstant.KeyValues_Names.UserData.toString());
 
                         GlobalConstant.show_Toast("Profile updated successfully.", con);
-
-//                        details = Constant_Class.GET_PERSONNEL_DATA(con, Constant_Class.KeyValues_Names.Own_Data.toString());
-//                        constant.setRoundImage(con, profile, details.optString(Constant_Class.Signup_Params.PhotoPath.toString()));
 
                     }
                 }
