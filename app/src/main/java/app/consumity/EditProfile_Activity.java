@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import org.json.JSONObject;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -183,7 +184,7 @@ public class EditProfile_Activity extends AppCompatActivity implements View.OnCl
         {
             if (requestCode == 1)
             {
-                String filePath = Environment.getExternalStorageDirectory() + "/temp.jpg";
+                String filePath = constant.getTemporaryPath();
                 if (filePath != null)
                 {
                     constant.performCrop(filePath, con);
@@ -194,7 +195,7 @@ public class EditProfile_Activity extends AppCompatActivity implements View.OnCl
             {
                 try
                 {
-                    String filePathG = Environment.getExternalStorageDirectory() + "/temp.jpg";
+                    String filePathG = constant.getTemporaryPath();
                     InputStream inputStream;
                     inputStream = con.getContentResolver().openInputStream(data.getData());
                     FileOutputStream fileOutputStream = new FileOutputStream(filePathG);
@@ -231,12 +232,17 @@ public class EditProfile_Activity extends AppCompatActivity implements View.OnCl
         {
             base64_photoPath = constant.Get_pic(con, path, imgv_user_profile);
             isImageUpdated = true;
+            constant.deleteCroppedImage();
         }
         catch (IOException e)
         {
             Log.e("Input output", "Exception" + e.toString());
         }
     }
+
+
+
+
 
     void VALIDATION_CHECK(View v)
     {

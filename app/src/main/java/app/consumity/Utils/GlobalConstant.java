@@ -229,6 +229,21 @@ public class GlobalConstant
         }
     }
 
+
+    public String getTemporaryPath()
+    {
+       return Environment.getExternalStorageDirectory() + "/temp.jpg";
+    }
+
+    public void deleteCroppedImage()
+    {
+        File file= new File(getTemporaryPath());
+        if(file.exists())
+        {
+            file.delete();
+        }
+    }
+
     public static Bitmap decodeFile(String filePath) throws IOException
     {
 
